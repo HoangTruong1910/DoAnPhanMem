@@ -1,0 +1,27 @@
+@{
+    Layout = "_CustomeLayout";
+}
+@model List<QLTTTM.models.MatBang>
+
+    
+<div class="wrapper">
+        <header>
+            <h1>Danh sách Mặt bằng</h1>
+        </header>
+    
+        <section class="property-list">
+            @foreach(var item in Model){
+                <div class="property-card">
+                    <img src ="@item.IMAGEPATH" alt="Mặt bằng 1">
+                    <h2>@item.TENMB</h2>
+                    <p>Diện tích: @(item.DIENTICH + "m²")</p>
+                    <p>Giá: @(item.GIATIEN + " VNĐ")</p>
+                    <a href="@Url.Action("ChiTietMB","Custome" , new{MAMB = item.MAMB})">Xem chi tiết</a>
+                </div>
+            }
+    
+            <!-- Thêm các thẻ property-card khác tại đây -->
+        </section>
+    
+      
+    </div>

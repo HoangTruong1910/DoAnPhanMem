@@ -1,0 +1,11 @@
+{
+    "editor.autoClosingOvertype": "never",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "SF Mono, Source Code Pro, Input Mono, Inconsolata, Arial, Helvetica, sans-serif",
+    "editor.fontSize": 13,
+    "editor.suggest.insertMode": "insert",
+    "audioCues.diffLineInserted": "off",
+    "editor.comments.insertSpace": true,
+    "editor.detectIndentation": false,
+    "eslint.problems.shortenToSingleLine": true
+}

@@ -1,0 +1,49 @@
+.brands{
+    padding-top: 200px;
+    font-family: 'Roboto',sans-serif;
+}
+.brand-header{
+    font-size: 30px;
+    color: rgb(171,130,33);
+    padding-bottom: 15px;
+}
+.type-brand{
+    font-size: 20px;
+    color: rgb(171,130,33);
+    font-weight: 700;
+    font-style: bold;
+    margin: 15px;
+}
+.brand-content .row{
+    display: flex;
+    justify-content: center;
+}
+.brand-content .col-md-3{
+    width: 23%;
+    height: 301.53;
+    padding: 0px 15px 30px;
+}
+.card-brand{
+    border: none;
+    box-shadow: -0.5em 0 1em rgb(224, 224, 224);
+}
+.card-img img{
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    transform: translateZ(0);
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+.content-brand-bottom{
+    font-size: 15px;
+    text-align: center;
+    padding-top: 5px;
+}
+.content-brand-bottom h3{
+    font-size: 25px;
+}
+.content-brand-bottom p {
+    font-size: 15px;
+}

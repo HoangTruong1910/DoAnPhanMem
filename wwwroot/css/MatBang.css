@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #555;
+    text-align: center;
+    padding-top: 200px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.property-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden; /* Để ẩn bất kỳ phần nào của hình ảnh vượt ra khỏi card */
+    position: relative; /* Để xác định vị trí của con trỏ chuột */
+}
+
+.property-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng transition cho thuộc tính transform */
+}
+
+.property-card:hover img {
+    transform: scale(1.1); /* Khi hover, zoom hình ảnh lên 1.1 lần kích thước ban đầu */
+}
+
+
+.property-card h2 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.property-card p {
+    font-size: 14px;
+}
+
+.property-card a {
+    display: block;
+    background-color: rgb(171,130,33);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease-in;
+}
+
+.property-card a:hover {
+    background-color: #555;
+}
