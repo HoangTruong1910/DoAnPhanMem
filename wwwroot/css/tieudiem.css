@@ -23,7 +23,7 @@
 .card-img-focus img{
     max-width: 100%;
     width: 100%;
-    height: 245px;
+    height: 260px;
     transform: translateZ(0);
     margin: 0 auto;
     display: inline-block;
@@ -43,6 +43,10 @@
 }
 .title-content-focus h3{ 
     font-size: 20px;
+    overflow: hidden;
+    max-height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .content-focus-bottom hr{
     opacity: 0.5;

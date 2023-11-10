@@ -2,10 +2,14 @@
     "editor.autoClosingOvertype": "never",
     "editor.fontLigatures": true,
     "editor.fontFamily": "SF Mono, Source Code Pro, Input Mono, Inconsolata, Arial, Helvetica, sans-serif",
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.suggest.insertMode": "insert",
     "audioCues.diffLineInserted": "off",
     "editor.comments.insertSpace": true,
     "editor.detectIndentation": false,
-    "eslint.problems.shortenToSingleLine": true
+    "eslint.problems.shortenToSingleLine": true,
+    "window.zoomLevel": 0,
+    "editor.lineHeight": 30,
+    "editor.letterSpacing": 0.5,
+    "workbench.commandPalette.experimental.enableNaturalLanguageSearch": false
 }

@@ -1,16 +1,16 @@
 @{
-    Layout="_AdminLayout";
+    Layout = "_AdminLayout";
 }
 @using QLTTTM.models
 @model QLTTTM.models.MatBang
 
 <div class="content-wrapper">
     @* <div class="page-header">
-        <h3 class="page-title" style="font-weight:bold;font-size:30px;color:#ab8221">
-            <span class="me-2">
-                <i class="fa-solid fa-gift" style="color: #ab8221;"></i>
-            </span> Quản Lý Thông Tin Sự Kiện
-        </h3>
+    <h3 class="page-title" style="font-weight:bold;font-size:30px;color:#ab8221">
+    <span class="me-2">
+    <i class="fa-solid fa-gift" style="color: #ab8221;"></i>
+    </span> Quản Lý Thông Tin Sự Kiện
+    </h3>
     </div> *@
 
     <div class="form_add_update">
@@ -32,9 +32,10 @@
 
 
 
-           <div class="form-group">
+            <div class="form-group">
                 <label asp-for="DIENTICH">Diện Tích:</label>
-                <input id="dientich" name="DIENTICH" asp-for="DIENTICH" type="number" min="0" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input id="dientich" name="DIENTICH" asp-for="DIENTICH" type="number" min="0" inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 <span asp-validation-for="DIENTICH" class="text-danger"></span>
             </div>
 
@@ -44,7 +45,8 @@
 
             <div class="form-group">
                 <label asp-for="GIATIEN">Giá Tiền:</label>
-                <input id="giatien" name="GIATIEN" asp-for="GIATIEN" type="number" min="0" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <input id="giatien" name="GIATIEN" asp-for="GIATIEN" type="number" min="0" inputmode="numeric"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 <span asp-validation-for="GIATIEN" class="text-danger"></span>
             </div>
 
@@ -54,11 +56,9 @@
 
             <div class="form-group">
                 <label asp-for="VITRI">Vị Trí:</label>
-                <input type="text" id="address" name="VITRI" asp-for="VITRI">
+                <input type="text" id="address" name="VITRI" asp-for="VITRI" readonly>
                 <span asp-validation-for="VITRI" class="text-danger"></span>
             </div>
-
-
 
 
             <div class="form-group">
@@ -70,9 +70,9 @@
                 </select>
                 <span asp-validation-for="TRANGTHAI" class="text-danger"></span>
             </div>
-           
-           
-             
+
+
+
 
             <div class="form-group">
                 <label asp-for="MOTA">Mô Tả:</label>
@@ -80,7 +80,7 @@
                 <span asp-validation-for="MOTA" class="text-danger"></span>
             </div>
 
-          
+
 
             <div class="form-group">
                 <label asp-for="IMAGEPATH">Hình Ảnh Tiêu Đề:</label>
@@ -88,7 +88,7 @@
                 <span asp-validation-for="IMAGEPATH" class="text-danger"></span>
 
             </div>
-            
+
 
 
             <div class="form-group">
@@ -105,10 +105,10 @@
                 <input type="file" id="image" accept="image/*" name="noidung" asp-for="IMAGEPATH2" multiple>
                 <span asp-validation-for="IMAGEPATH2" class="text-danger"></span>
             </div>
-     
-           
 
-            
+
+
+
             <div class="cover_submit">
                 <button type="submit" class="btn-submit">Cập Nhật</button>
             </div>
@@ -117,5 +117,5 @@
 
     </div>
 
-        
+
 </div>

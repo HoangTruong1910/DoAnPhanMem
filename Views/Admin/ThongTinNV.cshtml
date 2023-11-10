@@ -72,7 +72,7 @@
                             @chucvu.TENCV
                         </td>
                         <td class="action-buttons">
-                            @if (item.MANV != manv || item.MANV != 1)
+                            @if (item.MANV != manv && item.MANV != 1)
                             {
                                 @using (Html.BeginForm("XoaNV", "FunctionNV", new { MANV = item.MANV }, FormMethod.Post))
                                 {

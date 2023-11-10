@@ -33,13 +33,12 @@
 
     <div class="brand-content">
         <div class="container">
-            <div class="row">
+            <div class="row" data-aos="zoom-out-down" data-aos-duration="1500">
                 @foreach (var item in Model)
                 {
-
                     <div class="col-md-3">
                         <div class="card card-brand">
-                            <a href="@item.DIRECTION"> 
+                            <a href="@item.DIRECTION">
                                 <img src="@item.IMAGEPATH" alt="">
                             </a>
 
@@ -47,9 +46,26 @@
                                 <div class="title-content-brand">
                                     <h3>@item.TENDT</h3>
 
-                                    <p>
-                                        @ViewBag.tenloadt
-                                    </p>
+                                    @if (ViewBag.tenloadt != "")
+                                    {
+                                        <p>
+                                            @ViewBag.tenloadt
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        var loaidt = dbContext.LoaiDoiTacs.ToList();
+                                        foreach (var i in loaidt)
+                                        {
+                                            if (item.MALOAIDOITAC == i.MALOAIDT)
+                                            {
+                                                <p>
+                                                    @i.TENLOAI
+                                                </p>
+                                            }
+                                        }
+                                    }
+
                                 </div>
 
                                 <hr>

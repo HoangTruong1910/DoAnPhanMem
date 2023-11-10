@@ -45,10 +45,7 @@
                             <td>@(item.DIENTICH + "m²")</td>
                             <td>@(item.GIATIEN + " VNĐ")</td>
                             <td>
-                                <form asp-action="ChangeStatus" asp-controller="FunctionMB" method="post">
-                                    <input type="hidden" name="mamb" asp-for="@item.MAMB" value="@item.MAMB" />
-                                    <input type="checkbox" @(item.TRANGTHAI ? "checked" : "") onchange="this.form.submit()" />
-                                </form>
+                                Chưa được thuê 
                             </td>
 
                             <td>@item.MOTA</td>
@@ -65,10 +62,7 @@
                                         </span>
                                     </button>
                                 }
-                                @* <button class="remove" onclick="return confirm('Bạn có chắc chắn muốn xóa nhân viên này
-                        không?') ? window.location.href = '@Url.Action("XoaNV", "Function")' : false;">
-                        <span class="material-symbols-outlined">do_not_disturb_on</span>
-                        </button> *@
+                        
                                 <button class="edit">
                                     <span class="material-symbols-outlined"
                                         onclick="location.href = '@Url.Action("CapNhatMB","FunctionMB",new { mamb = item.MAMB })'">edit</span>
@@ -121,17 +115,14 @@
                             <td>@(item.DIENTICH + "m²")</td>
                             <td>@(item.GIATIEN + " VNĐ")</td>
                             <td>
-                                <form asp-action="ChangeStatus" asp-controller="FunctionMB" method="post">
-                                    <input type="hidden" name="mamb" asp-for="@item.MAMB" value="@item.MAMB" />
-                                    <input type="checkbox" @(item.TRANGTHAI ? "checked" : "") onchange="this.form.submit()" />
-                                </form>
+                                Đã được thuê
                             </td>
 
                             <td>@item.MOTA</td>
 
 
                             <td class="action-buttons">
-                                @using (Html.BeginForm("XoaMB", "FunctionMB", new { mamb = item.MAMB }, FormMethod.Post))
+                                @* @using (Html.BeginForm("XoaMB", "FunctionMB", new { mamb = item.MAMB }, FormMethod.Post))
                                 {
                                     @Html.AntiForgeryToken()
                                     <button type="submit" class="remove"
@@ -140,11 +131,9 @@
                                             do_not_disturb_on
                                         </span>
                                     </button>
-                                }
-                                @* <button class="remove" onclick="return confirm('Bạn có chắc chắn muốn xóa nhân viên này
-                        không?') ? window.location.href = '@Url.Action("XoaNV", "Function")' : false;">
-                        <span class="material-symbols-outlined">do_not_disturb_on</span>
-                        </button> *@
+                                } *@
+                                
+                                
                                 <button class="edit">
                                     <span class="material-symbols-outlined"
                                         onclick="location.href = '@Url.Action("CapNhatMB","FunctionMB",new { mamb = item.MAMB })'">edit</span>

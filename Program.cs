@@ -21,7 +21,7 @@ builder.Services.AddDbContext<DataSQLContext>(options =>
 
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Đặt thời gian session là 30 phút
+    options.IdleTimeout = TimeSpan.FromMinutes(120); // Đặt thời gian session là 120 phút
 });
 
 builder.Services.AddDistributedMemoryCache(); // Thêm dịch vụ bộ nhớ cache

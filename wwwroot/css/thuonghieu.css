@@ -26,16 +26,24 @@
 .card-brand{
     border: none;
     box-shadow: -0.5em 0 1em rgb(224, 224, 224);
+    display: flex;
+    align-items: center; /* Dọc giữa theo chiều dọc */
+    justify-content: center; /* Dọc giữa theo chiều ngang */
+    text-align: center; /* Căn giữa nội dung (nếu cần) */
+    padding: 20px; /* Điều chỉnh padding theo nhu cầu */
+    max-height: 400px; /* Đặt chiều cao cố định cho thẻ card */
+    overflow: hidden; /* Ẩn nội dung vượt ra khỏi thẻ card nếu có */
 }
-.card-img img{
+.card-brand img{
     max-width: 100%;
-    width: 100%;
-    height: 150px;
+    max-height: 120px; /* Điều chỉnh chiều cao tối đa theo nhu cầu */
+    width: auto;
     transform: translateZ(0);
     margin: 0 auto;
-    display: inline-block;
     vertical-align: middle;
+    object-fit: contain; /* Zoom lại để fit với thẻ card */
 }
+
 .content-brand-bottom{
     font-size: 15px;
     text-align: center;

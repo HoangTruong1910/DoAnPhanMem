@@ -18,11 +18,13 @@ h1 {
 }
 
 .property-image img {
-    max-width: 100%;
-    height: auto;
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
 }
 
 .property-info {

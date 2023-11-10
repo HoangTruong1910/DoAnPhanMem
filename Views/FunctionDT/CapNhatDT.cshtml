@@ -156,7 +156,11 @@
 
             
 
-
+            <div class="form-group">
+                <label asp-for="HDModels.NOIDUNG">Nội Dung:</label>
+                <textarea id="description" name="HDModels.NOIDUNG" rows="8" asp-for="HDModels.NOIDUNG"></textarea>
+                <span asp-validation-for="HDModels.NOIDUNG" class="text-danger"></span>
+            </div>
 
              @{
                 int? manv = Context.Session.GetInt32("MANV");

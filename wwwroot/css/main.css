@@ -38,6 +38,10 @@
 }
 .title_note{
     font-size: 20px;
+    overflow: hidden;
+    max-height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .content_note{
     max-height: 200px;
@@ -46,7 +50,6 @@
     overflow: hidden;
 }
 .row{
-    border-bottom: 2px solid rgb(171,130,33);
     padding : 20px;
 }
 .icon_lien_he{

@@ -53,6 +53,10 @@ body{
   color : black
 }
 
+.stuck .menu .menuitem .itemtitle:hover{
+    color : rgb(171, 130, 33);
+  }
+
 .header-wrapper{
   width: 100%;
   z-index: 30;
@@ -212,4 +216,125 @@ body{
 
 .icon-header{
   color: rgb(171,130,33);
+}
+
+/* Style cho ô tìm kiếm ẩn */
+.search-box {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); /* Làm tối nền phía sau */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column; /* Đặt layout cho search-box thành cột */
+    justify-content: flex-start; /* Đặt justification cho đầu cột */
+    align-items: center; /* Đặt alignment cho giữa cột */
+    overflow-y: auto; /* Cho phép scroll khi nội dung quá dài */
+}
+
+/* Style cho ô tìm kiếm hiện */
+.search-box.active {
+    display: flex;
+    justify-content: center; /* Đặt justification cho đầu cột */
+    align-items: center; /* Đặt alignment cho giữa cột */
+    overflow-y: hidden; /* Ngăn chặn scroll trong box active */
+}
+
+/* Style cho biểu tượng tìm kiếm */
+.search-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(171, 130, 31);
+}
+
+
+.search-input {
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    width: 600px;
+    border-radius: 40px;
+    border: 2px solid rgb(171, 130, 33);
+    background-color: transparent; /* Đặt nền trong suốt */
+    color: white;
+
+     /* Màu khi input được focus */
+     outline: none; /* Loại bỏ viền focus mặc định */
+     transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho viền */
+
+     /* Màu focus khi input được focus */
+     &:focus {
+         border-color: rgb(171, 130, 33); /* Thay đổi màu của viền focus khi input được focus */
+     }
+}
+
+.search-results {
+    margin-top: 15px;
+    width: 605px;
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+/* Đặt màu nền cho thanh cuộn */
+.search-results::-webkit-scrollbar {
+    width: 10px; /* Độ rộng của thanh cuộn */
+}
+
+/* Đặt màu nền cho "búa cuộn" (thumb) */
+.search-results::-webkit-scrollbar-thumb {
+    background-color: rgba(171, 130, 33, 0.5); /* Màu nền trong suốt */
+    border-radius: 10px; /* Độ cong viền */
+}
+
+
+.search-results ul {
+    list-style: none; /* Loại bỏ dấu chấm */
+    padding: 0; /* Xóa khoảng cách đệm bên trái */
+}
+
+.search-results li {
+    width: 98%;
+    height: 80px;
+    text-align: left; /* Căn giữa nội dung của từng mục */
+    line-height: 60px; /* Để căn giữa theo chiều dọc */
+    background-color: transparent;
+    border: 1px solid rgb(171, 130, 33);
+    margin: 20px 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    white-space: nowrap; /* Ngăn các từ bị ngắt */
+    text-overflow: ellipsis; /* Hiển thị dấu ... nếu văn bản vượt quá */
+    overflow: hidden; /* Ẩn phần vượt quá */
+}
+
+.search-results a {
+    text-decoration: none;
+    color: #FDF8F2;
+    font-size: 20px;
+    font-weight: 800;
+   text-align: center;
+}
+
+/* CSS để điều chỉnh kích thước của hình ảnh */
+.search-results li a img {
+    width: 60px; /* Điều chỉnh chiều rộng */
+    height: 60px; /* Điều chỉnh chiều cao */
+    margin-right: 10px; /* Tạo khoảng cách với tên mặt bằng */
+    vertical-align: middle;
+    object-fit: contain; /* Zoom lại để fit với thẻ card */
+}
+
+
+/* Thêm class cho <html> khi ô tìm kiếm được kích hoạt */
+.search-active-html {
+    overflow: hidden;
+}
+
+.close-button {
+    font-size: 30px;
+    font-weight: 900;
+    cursor: pointer;
 }
